@@ -7,7 +7,6 @@ require('./connection.php');
 
 $dataset=file_get_contents('php://input');
 
-echo "jjjjjjjjjjjjjjjjjjjjj";
 if(!empty($dataset)){
     $data=json_decode($dataset);
     $email=$data->email;
