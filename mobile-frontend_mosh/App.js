@@ -3,13 +3,18 @@ import React from 'react';
 import { StyleSheet, Text, View, TextInput , Button, TouchableOpacity} from 'react-native';
 import LoginScreen from './components/screens/LoginScreen';
 import ListViewScreen from './components/screens/ListViewScreen';
+import { NavigationContainer } from '@react-navigation/native';
+import LandingPage from './components/screens/auth/LandingPage';
+
+const Stack =createStackNavigator();
 
 export default function App() {
+
   return (
-    <View style={styles.container}>
-      {/* <LoginScreen/> */}
-      <ListViewScreen/>
-    </View>
+    <NavigationContainer>
+      <LandingPage/>
+    </NavigationContainer>
+    
   );
 }
 
