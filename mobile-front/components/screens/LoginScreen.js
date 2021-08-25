@@ -2,21 +2,41 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, TextInput , Button, TouchableOpacity} from 'react-native';
 
+// fontawsome -icons
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
+import { faEye } from '@fortawesome/free-regular-svg-icons';
+
+
 export default function LoginScreen() {
     return (
         <View style={styles.container}>
         <View style={styles.textinputView}>
           <Text style={styles.logintext}>Email</Text>
-        <TextInput 
+        <View style={styles.textinputLoginview}>
+            <View style={styles.fa}>
+            <FontAwesomeIcon icon={faEnvelope} size={20} color={'blue'}/>
+            </View>
+            <TextInput 
             style={styles.textinputLogin}
             placeholder='example@gmail.com'/>
+        </View>
         </View>
         
         <View style={styles.textinputView}>
         <Text style={styles.logintext}>Password</Text>
-        <TextInput
+        <View style={styles.textinputLoginview}>
+            <View style={styles.fa}>
+            <FontAwesomeIcon icon={faLock} size={20} color={'blue'}/>
+            </View>
+            <TextInput
             style={styles.textinputLogin}             
             placeholder='*********'/>
+            <View style={styles.faeye}>
+            <FontAwesomeIcon icon={faEye} size={20} color={'grey'}/>
+            </View>
+        </View>
+       
         </View>
 
         <TouchableOpacity style={styles.signup_Button}>
@@ -39,11 +59,26 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
     },
-    textinputLogin:{ 
+    textinputLoginview:{
       width:350,
-      padding:6,
       borderBottomColor:'#4169E1',
       borderBottomWidth:2,
+      flexDirection:'row',
+      // backgroundColor:'red',
+      paddingTop:5
+    },
+    textinputLogin:{ 
+      paddingLeft:20,
+      // backgroundColor:'yellow',
+      width:300,
+      paddingBottom:5
+    },
+    fa:{
+      top:5,
+      left:3
+    },
+    faeye:{
+      top:5,
     },
     textinputView:{
       margin:20,
