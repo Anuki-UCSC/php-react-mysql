@@ -1,17 +1,37 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
+
+
+
 import { StyleSheet, Text, View, TextInput , Button, TouchableOpacity} from 'react-native';
 import LoginScreen from './components/screens/LoginScreen';
 import ListViewScreen from './components/screens/ListViewScreen';
+import EditScreen from './components/screens/EditScreen';
+import AddScreen from './components/screens/AddScreen';
 
 
+// const Stack =createStackNavigator();
 
 export default function App() {
+
+
   return (
+
+    // <NavigationContainer>
+    //   <Stack.Navigator>
+    //     <Stack.Screen name='login' component={LoginScreen}/>
+    //     <Stack.Screen name='list' component={ListViewScreen}/>
+    //   </Stack.Navigator>
+    // </NavigationContainer>
+
     <View style={styles.container}>
-      {/* <LoginScreen/> */}
-      <ListViewScreen/>
+      <LoginScreen/>
+      {/* <ListViewScreen/> */}
+      {/* <EditScreen/> */}
+      {/* <AddScreen/> */}
     </View>
+    
+
   );
 }
 
@@ -19,8 +39,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    // alignItems: 'center',
+    // justifyContent: 'center',
   },
   textinputLogin:{ 
     width:350,

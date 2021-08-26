@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 
 export default function ListViewScreen() {
     return (
+        <View style={styles.container}>
         <View style={styles.listviewscreen}>
         <View style={styles.container}>
             <View>
@@ -73,6 +74,7 @@ export default function ListViewScreen() {
             <View style={styles.addbutton}>
                 <Text style={styles.addbuttontxt}>+</Text>
             </View>
+        </View>
         </View>
     )
 }
